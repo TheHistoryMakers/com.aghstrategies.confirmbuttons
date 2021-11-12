@@ -19,6 +19,7 @@ function confirmbuttons_civicrm_buildForm($formName, &$form) {
   }
   if ($formName == 'CRM_Contribute_Form_Contribution_Confirm' && ($form->getVar('_id') == 6 || $form->getVar('_id') == 7)) {
     Civi::resources()->addScriptFile('com.aghstrategies.confirmbuttons', 'js/confirmbuttons.js');
+    Civi::resources()->addStyleFile('com.aghstrategies.confirmbuttons', 'css/confirmProfile.css');
   }
 }
 
