@@ -1,0 +1,12 @@
+div.crm-container input[type=checkbox] {
+    opacity: 0;
+}
+
+#crm-container.crm-public select {
+  width: 98.55%;
+}
+
+#crm-container.crm-public .membership_amount-section .label {
+  text-align: left;
+  width: 100%;
+}

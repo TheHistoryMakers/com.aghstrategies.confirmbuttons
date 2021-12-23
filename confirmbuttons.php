@@ -14,8 +14,11 @@ use CRM_Confirmbuttons_ExtensionUtil as E;
  * @param CRM_Core_Form $form
  */
 function confirmbuttons_civicrm_buildForm($formName, &$form) {
-  if ($formName == 'CRM_Contribute_Form_Contribution_Main' && ($form->getVar('_id') == 6 || $form->getVar('_id') == 7)) {
-    Civi::resources()->addScriptFile('com.aghstrategies.confirmbuttons', 'js/reviewbuttons.js');
+  if ($formName == 'CRM_Contribute_Form_Contribution_Main') {
+    Civi::resources()->addStyleFile('com.aghstrategies.confirmbuttons', 'css/contributionStyles.css');
+    if ($form->getVar('_id') == 6 || $form->getVar('_id') == 7) {
+      Civi::resources()->addScriptFile('com.aghstrategies.confirmbuttons', 'js/reviewbuttons.js');
+    }
   }
   if ($formName == 'CRM_Contribute_Form_Contribution_Confirm' && ($form->getVar('_id') == 6 || $form->getVar('_id') == 7)) {
     Civi::resources()->addScriptFile('com.aghstrategies.confirmbuttons', 'js/confirmbuttons.js');
